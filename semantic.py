@@ -81,21 +81,3 @@ def Scored():
     max_score = 30
     return int(score/max_score)
 
-#     main function
-if __name__ == '__main__':
-    
-# add name of file
-    file_path = input('ResumeSakshiAgrawal.pdf')#+'.pdf'
-    
-#     add path of file
-    file = input('ResumeSakshiAgrawal.pdf')
-    
-    resume_text = extract_text_from_pdf(file_path)
-    PHONE_REG = re.compile(r'[\+\(]?[1-9][0-9 .\-\(\)]{8,}[0-9]')
-    EMAIL_REG = re.compile(r'[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+')
-    LINKEDIN_REG= re.compile(r'(([a-zA-Z0-9\-])*\.|[linkedin])[linkedin/\-]+\.[a-zA-Z0-9/\-_,&=\?\.;]+[^\.,\s<]')
-    
-    # abc = sections_of_text(resume_text)
-    
-    s = Scored()
-    print(f'Your score is: {s}')
